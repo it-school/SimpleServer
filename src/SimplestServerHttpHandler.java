@@ -50,7 +50,7 @@ public class SimplestServerHttpHandler implements HttpHandler {
       // build test response of all parameters
       StringBuilder response = new StringBuilder("{");
       for (String parameter : requestParamValues) {
-         response.append("\n\t").append(parameter.split("=")[0] + " = " + parameter.split("=")[1]).append(",");
+         response.append("\n\t\"").append(parameter.split("=")[0] + "\" = " + parameter.split("=")[1]).append(",");
       }
       response.deleteCharAt(response.length() - 1);
       response.append("\n}");
